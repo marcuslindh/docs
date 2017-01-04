@@ -1,10 +1,10 @@
 ---
-title: .NET Core Prerequisites
-description: .NET Core Prerequisites
-keywords: .NET, .NET Core
+title: Prerequisites for .NET Core on Windows | Microsoft Docs
+description: Learn what dependencies you need on your Windows machine to develop and run .NET Core applications.
+keywords: .NET Core, Windows, prerequisites, dependencies, Visual Studio
 author: billwagner
 ms.author: wiwagn
-ms.date: 09/15/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
@@ -13,16 +13,11 @@ ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 
 # Prerequisites for .NET Core on Windows
 
-.NET Core development on Windows with Visual Studio requires:
-
-* A supported version of the Windows client or operating system.
-* Visual Studio 2015 Update 3.3 or later
-* NuGet Manager extension for Visual Studio
-* .NET Core Tooling Preview 2
+This articles shows you what dependencies you need to deploy and run .NET Core applications on Windows machines and develop using Visual Studio.
 
 ## Supported Windows versions
 
-.NET Core is supported by the following versions of Windows:
+.NET Core is supported on the following versions of Windows:
 
 * Windows 7 SP1
 * Windows 8.1
@@ -32,20 +27,28 @@ ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 * Windows Server 2012 R2 SP1 (Full Server or Server Core)
 * Windows Server 2016 (Full Server, Server Core or Nano Server)
 
-You can see the full set of [supported operating systems](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support) in the [.NET Core Release Notes](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md).
+You can see the full set of [supported operating systems](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support) in the [.NET Core 1.0.0 Release Notes](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md).
 
 ## .NET Core dependencies
 
-.NET Core requires the VC++ Redistributable when running on Windows. It is installed for you by the .NET Core installer. You need to install the Visual C++ redistributable manually if you are installing .NET Core via the installer script (`dotnet-install.ps1`) or are attempting to run a self-contained .NET Core application. 
+.NET Core requires the Visual C++ Redistributable when running on Windows. It is automatically installed for you by the .NET Core installer. However, you need to manually install the Visual C++ redistributable if you are installing .NET Core via the [installer script](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-install-script) or deploying a self-contained .NET Core application.
 
 [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
-* Windows 7 and 2008 only
-    * Please make sure that your Windows installation is up-to-date and includes hotfix [KB2533623](https://support.microsoft.com/en-us/kb/2533623) installed through Windows Update.
-    
+* Windows 7 and Windows 2008 only
+    * Make sure that your Windows installation is up-to-date and includes hotfix [KB2533623](https://support.microsoft.com/en-us/kb/2533623) installed through Windows Update.
+
 ## Visual Studio
 
-You need Visual Studio 2015 to develop .NET Core apps. You can download [Visual Studio Community 2015](https://www.visualstudio.com/downloads/download-visual-studio-vs) for free. 
+If you want to develop .NET Core applications on Windows using Visual Studio, you'll need:
+
+* [Visual Studio 2015 Update 3.3 or later](#visual-studio-2015).
+* [NuGet Manager extension for Visual Studio](#nuget-manager-extension-for-visual-studio).
+* [.NET Core Tooling Preview 2](#net-core-tools-for-visual-studio-2015).
+
+### Visual Studio 2015
+
+You need Visual Studio 2015 to develop .NET Core apps. You can download [Visual Studio Community 2015](https://www.visualstudio.com/downloads/) for free. 
 
 Verify that you're running [Visual Studio 2015 Update 3.3](https://msdn.microsoft.com/library/mt752379.aspx):
 
@@ -56,11 +59,11 @@ Verify that you're running [Visual Studio 2015 Update 3.3](https://msdn.microsof
 
 You can read more about the changes in Update 3 in the [release notes](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs).
 
-## NuGet Manager extension for Visual Studio
+### NuGet Manager extension for Visual Studio
 
 NuGet is the package manager for the Microsoft development platform including .NET Core. You need [NuGet 3.5.0](https://dist.nuget.org/visualstudio-2015-vsix/v3.5.0-beta/NuGet.Tools.vsix) or higher to build .NET Core apps.
 
-## .NET Core tools for Visual Studio 2015
+### .NET Core tools for Visual Studio 2015
 
 Download and install the [.NET Core 1.0.1 - VS 2015 Tooling Preview 2][sdk]. 
 
