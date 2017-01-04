@@ -13,6 +13,10 @@ ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 
 # Prerequisites for .NET Core on Windows
 
+> [!WARNING]
+> This topic applies to .NET Core Tools Preview 2 (project.json format). For the .NET Core Tools Preview 4 topic (MSBuild format),
+> see the [Prerequisites for Windows development (Preview 4 Tooling)](../preview3/windows-prerequisites.md) article.
+
 This articles shows you what dependencies you need to deploy and run .NET Core applications on Windows machines and develop using Visual Studio.
 
 ## Supported Windows versions
